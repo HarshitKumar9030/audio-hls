@@ -18,7 +18,7 @@ const PORT = 5000;
 const allowedOrigins = [
   'http://localhost:3000', 
   'https://leoncyriac.me',  
-  'music.leoncyriac.me'
+  'https://music.leoncyriac.me'
 ];
 
 const corsOptions = {
