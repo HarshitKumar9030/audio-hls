@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Stats</title>
+</head>
+<body>
+    <h1>Audio Stats</h1>
+    <table border="1">
+        <tr>
+            <th>Audio ID</th>
+            <th>Views</th>
+        </tr>
+        <% for(let id in stats) { %>
+            <tr>
+                <td><%= id %></td>
+                <td><%= stats[id].views %></td>
+            </tr>
+        <% } %>
+    </table>
+    <br>
+    <a href="/">Upload More Audio</a>
+</body>
+</html>

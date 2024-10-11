@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play Audio</title>
+</head>
+<body>
+    <h1>Playing Audio ID: <%= audioId %></h1>
+    <video id="audioPlayer" controls></video>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        var audio = document.getElementById('audioPlayer');
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource('/play/<%= audioId %>');
+            hls.attachMedia(audio);
+            // User must click play button to start playback
+        } else if (audio.canPlayType('application/vnd.apple.mpegurl')) {
+            audio.src = '/play/<%= audioId %>';
+            // User must click play button
+        } else {
+            console.error('This browser does not support HLS.');
+        }
+    </script>
+    <br>
+    <a href="/stats">View Stats</a>
+</body>
+</html>
