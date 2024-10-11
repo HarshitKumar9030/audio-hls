@@ -17,7 +17,7 @@ const PORT = 5000;
 // Define the allowed origins
 const allowedOrigins = [
   'http://localhost:3000', 
-  'http://yourdomain.com',  
+  'https://leoncyriac.me',  
 ];
 
 const corsOptions = {
